@@ -3,6 +3,7 @@ from urllib import request as urllib2
 from urllib import parse
 import random
 
+
 def loadPage(url, page):
     '''
     根据url获取服务器响应文件
@@ -23,6 +24,7 @@ def loadPage(url, page):
     html = response.read()
     return html
 
+
 def write(html, page):
     '''
     将html文件写入本地
@@ -31,9 +33,9 @@ def write(html, page):
     '''
     data = html
     file_name = 'tieba{}.txt'.format(page)
-    print('---------正在保存文件%s-------'%file_name)
+    print('---------正在保存文件%s-------' % file_name)
     # 运用with open as语句使代码更加简洁 避免写异常处理和文件关闭语句
-    with open(file_name,'w',encoding='utf-8') as file:
+    with open(file_name, 'w', encoding='utf-8') as file:
         file.write(data.decode())
     print('---------success!---------')
 
@@ -43,15 +45,16 @@ def tiebaSpider(url, kw, begin, end):
     爬取贴吧信息
     '''
     words = {
-        'kw':kw
+        'kw': kw
     }
     kw = parse.urlencode(words)
     url = url % (kw)
     for page in range(begin, end + 1):
-        pn = ((page-1)*50)
+        pn = ((page - 1) * 50)
         ful_url = url + str(pn)
         html = loadPage(url, page)
         write(html, page)
+
 
 if __name__ == '__main__':
     kw = input('请输入爬取贴吧名:')
