@@ -8,6 +8,7 @@ from packages.loop import for_test
 from packages.file import read_files
 from packages.file import write_files
 from packages.ClassUsage import User
+from packages.RegExp import reg_exp
 
 
 def hello():
@@ -31,3 +32,4 @@ if __name__ == '__main__':
     user1.count += 2  # 使用实例化对象调用count来计算，不会生效
     print("User类的变量count=%s" % user.count)
     print("user1实例化信息:%s" % user1.to_string())
+    reg_exp("abc","abcdwadafgabcdfgk243abc43da")
