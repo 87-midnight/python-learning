@@ -5,6 +5,9 @@ from list_test import _list_, _map_
 # 如果在__init__.py定义了后，就可以使用以下的方式
 from packages.loop import for_test
 
+from packages.file import read_files
+from packages.file import write_files
+
 
 def hello():
     _str = input("input something:")
@@ -13,5 +16,9 @@ def hello():
     _map_()
 
 
-hello()
+# hello()
+
 for_test()
+read_files("F:/robots.txt")
+write_files("F:/robots.txt","hello,python")
+read_files("F:/robots.txt")
