@@ -9,6 +9,7 @@ from packages.file import read_files
 from packages.file import write_files
 from packages.ClassUsage import User
 from packages.RegExp import reg_exp
+from packages.dateTime import time_test
 
 
 def hello():
@@ -33,3 +34,4 @@ if __name__ == '__main__':
     print("User类的变量count=%s" % user.count)
     print("user1实例化信息:%s" % user1.to_string())
     reg_exp("abc","abcdwadafgabcdfgk243abc43da")
+    time_test()
