@@ -1,22 +1,22 @@
 # -*- coding:utf-8 -*-
-from list_test import _list_, _map_
+from packages.ClassUsage import User
+from packages.RegExp import reg_exp
+from packages.dateTime import time_test
+from packages.file import read_files
+from packages.file import write_files
 # 如果不在loop目录下的__init__.py里 加入 from .for_loop import for_test，那么就要用下面的全路径方式引入
 # from packages.loop.for_loop import for_test
 # 如果在__init__.py定义了后，就可以使用以下的方式
 from packages.loop import for_test
-
-from packages.file import read_files
-from packages.file import write_files
-from packages.ClassUsage import User
-from packages.RegExp import reg_exp
-from packages.dateTime import time_test
+from packages.loop import list_
+from packages.loop import map_
 
 
 def hello():
     _str = input("input something:")
     print("%s" % _str)
-    _list_()
-    _map_()
+    list_()
+    map_()
 
 
 # hello()
