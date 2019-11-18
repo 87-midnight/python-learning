@@ -1,3 +1,6 @@
+
+***warning:this project has been migrating to [NewbieInPrograming](https://github.com/87-midnight/NewbieInPrograming),and it would never be maintained forever***
+
 # python-learning
 
 ### Jupyter 介绍
